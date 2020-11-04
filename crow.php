@@ -1,7 +1,6 @@
 <?php
 
-echo "<br><br>Crow.PHP is still in beta, and when a stable release of it comes out, this message will be dismissed.<br>";
-echo file_get_contents("https://raw.githubusercontent.com/chattybot0/crow.php/main/crow.php") . "<br><br>";
+echo "<br><br>Crow.PHP is still in beta, and when a stable release of it comes out, this message will be dismissed.<br><br>";
 
 //The Auto-Updater, Planned to be moved into a function.
 $write = fopen("crow.php","w");
