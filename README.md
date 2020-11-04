@@ -1,5 +1,5 @@
 # Crow.PHP - The Auto Package Installer
-Install Dependencies, no Managers Required. Automatically.
+Why waste time install and update packages? Auto-Install them, Don't waste your time.
 
 How to use?
 
@@ -10,7 +10,9 @@ include('crow.php');
 ```
 *the packages will be installed and added automatically.*
 <br><br>
-[Click to open crow.php](https://github.com/chattybot0/crow.php/blob/main/crow.php)
+[See Crow.PHP](https://github.com/chattybot0/crow.php/blob/main/crow.php)
+<br>
+[See the repo on github](https://github.com/chattybot0/crow.php/)
 <br>
 [See the DevLog on Trello](https://trello.com/b/nZMhZM0q/crowphp)
 <br>
