@@ -1,6 +1,6 @@
 <?php
 
-echo "<br><br><b>Crow.PHP is still in beta, and when a stable release of it comes out, this message will be dismissed.</b><br><br>";
+echo "<br><br><b>Crow.PHP is nearly coming stable! Just wait a bit more!</b><br><br>";
 
 //The Auto-Updater
 function update(){
