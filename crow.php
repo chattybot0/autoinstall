@@ -16,9 +16,19 @@ function console_log($text = "No input specified, This means this must be a Crow
   echo "<!--Added by Crow.php--><script>console.log('" . $text . "');</script>";
 }
 
+function loadpkgs()
+{
+  $read = fopen("ai.pkg","r");
+  $urls = explode("\n",explode("packs@",fread($read,filesize("ai.pkg")))[1]);
+  foreach($urls as $url){
+		$pkg = file_get_contents($url);
+		
+  }
+}
+
 //Check for `ai.pkg`
 if(file_exists("ai.pkg")){
-  
+  loadpkgs();
 }
 else {
   console_log("Crow.PHP Load error: No ai.pkg file found, Or the permissions to read it is denied.");
