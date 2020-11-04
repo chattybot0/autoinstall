@@ -12,6 +12,8 @@ include('crow.php');
 <br><br>
 [Click to open crow.php](https://github.com/chattybot0/crow.php/blob/main/crow.php)
 <br>
+[See the DevLog on Trello](https://trello.com/b/nZMhZM0q/crowphp)
+<br>
 [Learn how to write your ai.pkg](https://github.com/chattybot0/crow.php/blob/main/creators/ai.md)
 <br>
 [Wanna show off? Learn how to create a package](https://github.com/chattybot0/crow.php/blob/main/creators/pkg.md)
