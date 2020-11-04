@@ -8,7 +8,7 @@ fclose($write);
 
 //Log a value to console
 function console_log($text = "No input specified, This means this must be a Crow.PHP FATAL error."){
-  echo "<!--Added by Crow.php--><script>console.log(" . $text . ");</script>";
+  echo "<!--Added by Crow.php--><script>console.log('" . $text . "');</script>";
 }
 
 //Check for `ai.pkg`
