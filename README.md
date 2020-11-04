@@ -10,7 +10,7 @@ include('crow.php');
 ```
 *the packages will be installed and added automatically.*
 <br><br><br><br><br>
-** [Click to open crow.php](https://chattybot0.github.io/crow.php/) **
+[Click to open crow.php](https://github.com/chattybot0/crow.php/blob/main/crow.php)
 <br><br>
 **Note**: _Crow.PHP auto updates, so adding it only once, and the newest version will always be installed._
 <br>
