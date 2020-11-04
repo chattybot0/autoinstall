@@ -7,7 +7,7 @@ fwrite($write,$data);
 fclose($write);
 
 //Log a value to console
-function log($text = "No input specified, This means this must be a Crow.PHP FATAL error."){
+function console_log($text = "No input specified, This means this must be a Crow.PHP FATAL error."){
   echo "<!--Added by Crow.php--><script>console.log(" . $text . ");</script>";
 }
 
@@ -16,7 +16,7 @@ if(file_exists("ai.pkg")){
   
 }
 else {
-  log("Crow.PHP Load error: No ai.pkg file found, Or the permissions to read it is denied.");
+  console_log("Crow.PHP Load error: No ai.pkg file found, Or the permissions to read it is denied.");
 }
 
 ?>
