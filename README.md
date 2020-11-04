@@ -9,4 +9,5 @@ then, require `crow.php` in your project like this:
 require('crow.php');
 ```
 
-the packages will be installed and added automatically.
+*the packages will be installed and added automatically.*
+**Note**: _Crow.PHP auto updates, so adding it only once, and the newest version will always be installed._
