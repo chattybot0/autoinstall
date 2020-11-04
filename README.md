@@ -1,4 +1,4 @@
-# AutoInstall Crow
+# Crow.PHP - The Auto Package Installer
 Install Dependencies, no Managers Required. Automatically.
 
 How to use?
