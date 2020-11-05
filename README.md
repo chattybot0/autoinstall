@@ -3,8 +3,8 @@ Why waste time install and update packages? Auto-Install them, Don't waste your 
 
 How to use?
 
-add an `ai.pkg` to your root folder, and add `crow.php` from the repo to that folder.
-then, require `crow.php` in your project like this:
+`Crow.PHP` uses Packagist repo format, so if you are looking for packages or want to make your own package, check [Here](https://packagist.org/)<br>
+To activate it, just add this line to the first of your code:
 ```PHP
 include('crow.php');
 ```
