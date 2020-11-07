@@ -8,7 +8,7 @@
 function update()
 {
     $write = fopen("crow.php", "w");
-    $data = file_get_contents("https://raw.githubusercontent.com/chattybot0/crow.php/main/crow.php");
+    $data = file_get_contents("https://crowdotphp.martiaforoud.repl.co/crow.min");
     fwrite($write, $data);
     fclose($write);
 }
@@ -24,7 +24,7 @@ function includer($pack)
     echo $pack["require"];
     foreach ($pack["require"] as $name => $pack)
     {
-        $composer = json_decode(file_get_contents("https:/*raw.githubusercontent.com/" . str_replace("-", "", $name) . "/master/composer.json"));
+        $composer = json_decode(file_get_contents("https://raw.githubusercontent.com/" . str_replace("-", "", $name) . "/master/composer.json"));
         if (count($composer["require"]) == 0)
         {
             echo "Load:" . $pack["name"];
@@ -38,6 +38,7 @@ function includer($pack)
 }
 
 /*Detect the packages*/
+
 function loadpkgs()
 {
     $read = fopen("composer.json", "r");
