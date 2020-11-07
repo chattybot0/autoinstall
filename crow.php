@@ -1,43 +1,59 @@
 <?php
 
-echo "<br><br><b>Crow.PHP is nearly coming stable! Just wait a bit more!</b><br><br>";
+/*
+ CrowDotPHP
+*/
 
-//The Auto-Updater
-function update(){
-  $write = fopen("crow.php","w");
-  $data = file_get_contents("https://raw.githubusercontent.com/chattybot0/crow.php/main/crow.php");
-  fwrite($write,$data);
-  fclose($write);
-}
-update();
-
-//Log a value to console
-function console_log($text = "No input specified, This means this must be a Crow.PHP FATAL error."){
-  echo "<script>console.log('" . $text . "');</script>";
+/*The Auto-Updater*/
+function update()
+{
+    $write = fopen("crow.php", "w");
+    $data = file_get_contents("https://raw.githubusercontent.com/chattybot0/crow.php/main/crow.php");
+    fwrite($write, $data);
+    fclose($write);
 }
 
+/*Log a value to console*/
+function console_log($text = "No input specified, This means this must be a Crow.PHP FATAL error.")
+{
+    echo "<script>console.log('" . $text . "');</script>";
+}
+
+function includer($pack)
+{
+    echo $pack["require"];
+    foreach ($pack["require"] as $name => $pack)
+    {
+        $composer = json_decode(file_get_contents("https:/*raw.githubusercontent.com/" . str_replace("-", "", $name) . "/master/composer.json"));
+        if (count($composer["require"]) == 0)
+        {
+            echo "Load:" . $pack["name"];
+            return true;
+        }
+        else
+        {
+            includer($composer);
+        }
+    }
+}
+
+/*Detect the packages*/
 function loadpkgs()
 {
-  $read = fopen("ai.pkg","r");
-  $urls = explode("\n",explode("packs@",fread($read,filesize("ai.pkg")))[1]);
-  foreach($urls as $url){
-	  $pkg = file_get_contents($url);
-		$packs = explode("main@",$main)[1];
-    $main = explode("sep;\ndeps@\n",$packs)[0];
-    $deps = explode("\n",explode("sep;\ndeps@\n",$packs)[1]);
-    include($main);
-    foreach($deps as $dep){
-      include($dep);
-    }
-  }
+    $read = fopen("composer.json", "r");
+    $packs = json_decode(fread($read, filesize("composer.json")) , true);
+    /*includer($packs);*/
+    /*echo $packs["require"];*/
+    
 }
 
-//Check for `ai.pkg`
-if(file_exists("ai.pkg")){
-  loadpkgs();
+/*Check for `composer.json`*/
+if (file_exists("composer.json"))
+{
+    loadpkgs();
 }
-else {
-  console_log("Crow.PHP Load error: No ai.pkg file found, Or the permissions to read it is denied.");
+else
+{
+    console_log("Crow.PHP Load error: No composer.json file found, Or the permissions to read it is denied.");
 }
-
 ?>
