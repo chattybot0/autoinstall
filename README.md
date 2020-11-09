@@ -19,9 +19,3 @@ curl -sS https://crowdotphp.martiaforoud.repl.co/crow.min | php
 [See the repo on github](https://github.com/chattybot0/crow.php/)
 <br>
 [See the DevLog on Trello](https://trello.com/b/nZMhZM0q/crowphp)
-<br><br><br><br>
-**Note**: _Crow.PHP auto updates, so adding it only once, and the newest version will always be installed._
-<br>
-**Another Note**: _The updates will affect you after some time, so be patient._
-<br>
-**A Last Note**: _Crow.PHP only updates when an HTTP GET request is made, but you can run it manually or use cron jobs. ( i prefer ~crow~ jobs )_
