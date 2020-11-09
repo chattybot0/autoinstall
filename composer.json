@@ -1,0 +1,7 @@
+{
+    "name": "mforoud86/crowdotphp",
+    "description": "Why waste time install and update packages? Auto-Install them, Don’t waste your time.",
+    "require": {
+        "php": "^7.2",
+    }
+}
