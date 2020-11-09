@@ -43,12 +43,9 @@ if (file_exists("composer.json")) {
     
     loadpkgs();
 } else {
-    {
-    	"require": {
-        	"mforoud86/crowdotphp": "^1.0"
-    	}
-	}
-
-    console_log("Crow.PHP Load error: No composer.json file found, Or the permissions to read it is denied, Trying to create one...");
+    console_log("Crow.PHP Load error: No composer.json file, Making one...");
+    $composerjson = fopen("composer.json","w");
+	fwrite($composerjson,'{ "require": { "mforoud86/crowdotphp": "^1.0" } }');
+	fclose($composerjson);
 }
 ?>

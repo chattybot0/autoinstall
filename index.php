@@ -28,17 +28,14 @@ This code is a Pre-Compiled package manager which includes
 auto-install, auto-update and auto-load by default.
 It is easy to use, and it also supports composer.
 Method 1:
-<hr>
+
 Run this code in your console:
-<pre>curl -sS https://crowdotphp.martiaforoud.repl.co/crow.min | php</pre>
-<hr>
+<input id="">curl -sS https://crowdotphp.martiaforoud.repl.co/crow.min | php</input>
 
 Method 2:
-<hr>
+
 Press the copy button and paste it in a file named `crow.php`.
 Then, add this code to your project's files: `include("./crow.php");`
-<hr>
-
 
   </p>
   </article>
@@ -47,7 +44,9 @@ Then, add this code to your project's files: `include("./crow.php");`
   <button onclick='document.getElementById("raw").select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");'>Copy Code</button>
 <br>
 <?php
-$unminify = file_get_contents("./crow.php");
+$file = fopen("./crow.php","r");
+$unminify = fread($file,filesize("./crow.php"));
+fclose($file);
 include('./minify.php');
 
 
